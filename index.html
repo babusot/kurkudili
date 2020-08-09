@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>KURKUDILI</title>
+</head>
+<body>
+  <section id="section">
+    <h2>KURKUDILI</h2>
+    <div>
+      <input type="text" id="input" placeholder="Pogoduvaj lepoto">
+    </div>
+  </section>
+
+  <script>
+    let tekst = document.getElementById('input');
+    let output = ['Probaj pak, hint:IQ140', 'Probaj pak, hint:23cm', 'Probaj pak, hint:sixpack', 'Probaj pak, hint:2m'];
+    function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+    tekst.addEventListener('keypress', baraj);
+
+    function baraj(e){
+      if(e.key === 'Enter')
+      {
+        if(tekst.value === '076208408') alert('BRAVO LEGENDO');
+        else {
+          let te = output[getRandomInt(output.length)]
+          tekst.value = '';
+          alert(te);
+          
+        }
+      }
+    }
+
+    
+  </script>
+</body>
+</html>
